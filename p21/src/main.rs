@@ -1,7 +1,8 @@
 use std::cmp::max;
 
 fn main() {
-    println!("Hello, world!");
+    let result = get_max_triangle_len(vec![2, 3, 4, 5, 10]);
+    println!("{}", result);
 }
 
 fn get_max_triangle_len(a: Vec<u32>) -> u32 {
