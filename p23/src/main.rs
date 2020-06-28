@@ -8,14 +8,12 @@ fn main() {
 
 fn ant(l: u32, x: Vec<u32>) -> (u32, u32) {
     let mut min_t = 0;
-    for xi in &x {
-        min_t = max(min_t, min(*xi, l - xi));
-    }
-
     let mut max_t = 0;
     for xi in &x {
+        min_t = max(min_t, min(*xi, l - xi));
         max_t = max(max_t, max(*xi, l - xi));
     }
+
     (min_t, max_t)
 }
 
